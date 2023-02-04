@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busqueda</title>
+</head>
+<body>
+    
+<h1> Ingrese el nombre del perfume que buscas: </h1>
+    <form action="/perfuApp/buscarf" method="GET">
+        <input type="text" name="nombre" id="nombre">
+        <input type="submit" name="Buscar">
+     </form>
+
+     {% if femeninas %}
+
+    <h2 style="color:rgb(8, 153, 153)">Estamos buscando: {{nombre}}</h2> 
+    <ul>
+	{% for femeninas in femeninas %}
+		<li> {{femeninas.nombre}}, {{femeninas.fecha}} </li>
+		
+	{% endfor %}
+
+    </ul>
+
+    {% endif %}
+
+
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends "home.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+    
+<title>Redirigir al navegador a otra URL</title>
+<META HTTP-EQUIV="REFRESH" CONTENT="5;URL=http://127.0.0.1:8000/perfuApp/linf">
+</head>
+<body>
+Fragancia modificada con exito. Será redirigido al listado de <a href="#!">fragancias infantiles</a>
+</body>
+</html>
+
+{% endblock %}

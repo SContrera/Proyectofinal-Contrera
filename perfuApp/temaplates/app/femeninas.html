@@ -1,0 +1,27 @@
+{% extends 'home.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+
+{% if miFormulario.errors %}
+
+<p style="color:red;"> Están mal los datos revisar </p>
+{% endif %}
+<h1 style="color:rgb(252, 131, 151)"> FEMENINAS </h1>
+<p> Información de Fragancias femeninas </p>
+<form action="" method="POST" > {% csrf_token %}
+    
+    <table>
+
+            {{ miFormulario.as_table }}
+
+    </table>
+    <input type="submit", value="Enviar">
+    
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'home.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+<h1> Bienvenido a la perfumeria.</h1>
+
+<div class="text-center">
+    <img height="40px" src="{{url}}">
+    <h3> Que bueno verte {{user.username}}</h3>     
+
+</div>
+
+{% endblock %}

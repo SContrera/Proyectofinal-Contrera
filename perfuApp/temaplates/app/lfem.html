@@ -1,0 +1,29 @@
+{% extends "home.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1> Listado de fragancias femeninas</h1>
+
+<body>
+    {% for p in fem %}
+        <li>{{p}}</li>  
+        <button>
+            <a href="{% url 'eliminarfem' p.nombre %}"> Eliminar</a>
+            <a href="{% url 'editarfem' p.nombre %}"> Editar</a> -->
+        </button>
+    {% endfor %}
+    
+    
+    <br>
+   <button> <a href="{% url 'femeninas' %}">Agregar otra fragancia</a> </button>
+    <br>
+    <button><p><a href=" ../perfuApp">Regresar</a></button>
+
+
+</body>
+
+{% endblock %}
