@@ -36,6 +36,7 @@ def Masculinas(request):
 
             return render(request, "masculinas.html", {"miFormulario": miFormulario})
 
+@login_required
 def leerMasc(request):
 
       masc = MasculinaS.objects.all() #trae todos los profesores
@@ -100,7 +101,7 @@ def editarMasc(request, perfume_nombre):
 
 
 
-
+@login_required
 def Femeninas(request):
 
       if request.method == "POST":
@@ -118,7 +119,7 @@ def Femeninas(request):
 
             return render(request, "femeninas.html", {"miFormulario": miFormulario})
 
-
+@login_required
 def leerFem(request):
 
       fem = FemeninaS.objects.all() #trae todos los profesores
@@ -180,24 +181,7 @@ def editarFem(request, perfume_nombre):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@login_required
 def Infantiles(request):
 
       if request.method == "POST":
@@ -217,7 +201,7 @@ def Infantiles(request):
 
 
 
-
+@login_required
 def leerInf(request):
 
       inf = InfantileS.objects.all() #trae todos los profesores
